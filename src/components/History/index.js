@@ -1,36 +1,43 @@
 
 
 
-import React from 'react';
+function List(props) {
 
-const HBody = function HBody(props) {
+    const style = {
+        padding: '10px',
+        overflow: 'auto'
+    }
 
     return (
-        <ul className='history-container'>
+        <ul style={style}>
             {props.children}
         </ul>
     );
 }
 
-const HItem = function HItem(props) {
+function Item(props) {
 
     const style = {
-        padding: '10px',
-        background: (props.index % 2 === 0) ? '#262626' : '#383838',
-        display: 'flex',
-        flexFlow: 'row'
-    }
+        listStyle: 'none',
+        fontSize: '14px',
+        lineHeight: '50px',
+        overflow: 'auto',
+        borderBottom: '1px solid #ddd',
+        padding: '10px 0',
+        cursor: 'pointer'
+    };
 
     return (
-        <li style={style} onClick={props.onclick}>
-            {props.children}
+        <li style={style} className='history-item'>
+            <div style={{float: 'left', minWidth: '40px', width: '30%', lineHeight: '24px'}}>{props.method}</div>
+            <div style={{float: 'left', width: '70%', lineHeight: '24px', wordBreak: 'break-all'}}>{props.url}</div>
         </li>
     );
 }
 
 const History = {
-    HBody,
-    HItem
-};
+    List,
+    Item
+}
 
 export default History;

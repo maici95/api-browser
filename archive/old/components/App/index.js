@@ -71,8 +71,9 @@ export default function App() {
 
                     return (
                         <History.HItem key={i} index={i} onclick={() => test(e, true)}>
-                            <div style={{width: '100px'}}>{e.method}</div>
-                            <div>{e.url}</div>
+                            {e.method}
+                            {e.url}
+                            <button>delete</button>
                         </History.HItem>
                     );
                 })}

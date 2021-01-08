@@ -4,12 +4,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-import App from './App';
+import App from './components/App';
 
+//import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css';
 
 ReactDOM.render(
-    <App/>,
+    <App />,
     document.querySelector('#root')
 );
