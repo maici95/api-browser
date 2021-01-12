@@ -5,7 +5,8 @@ function List(props) {
 
     const style = {
         padding: '10px',
-        overflow: 'auto'
+        overflow: 'auto',
+        borderTop: '1px solid #ddd'
     }
 
     return (
@@ -28,7 +29,7 @@ function Item(props) {
     };
 
     return (
-        <li style={style} className='history-item'>
+        <li style={style} className='history-item' onClick={props.onClick}>
             <div style={{float: 'left', minWidth: '40px', width: '30%', lineHeight: '24px'}}>{props.method}</div>
             <div style={{float: 'left', width: '70%', lineHeight: '24px', wordBreak: 'break-all'}}>{props.url}</div>
         </li>
